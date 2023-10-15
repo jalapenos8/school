@@ -20,7 +20,7 @@
             <div class="border-r border-slate-600 flex flex-col justify-end">
                 @foreach ($units as $unit)
                     @if ($unit->term == 1)
-                        @if($unit->status == 'awaited')
+                        @if($unit->status == 'published')
                             <div class="border-b border-slate-600 h-full flex items-center justify-center p-3 py-5 w-full" ><a href="{{ route('units.show', [$subject, $unit])}}">{{ $unit->name }}</a></div> 
                         @else
                         @subject($subject)
