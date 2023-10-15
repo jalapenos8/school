@@ -1,0 +1,1657 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+}
+::placeholder {
+  color: #c8c8c8; /* Replace with the desired color */
+}
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  text-align: center;
+}
+input[type='text'], input[type='password'] {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  outline: none;
+  border: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+textarea,
+input[type='text'] {
+  transition: background-color 0.5s ease;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6F7EFF;
+  border-radius: 10px;
+}
+
+
+/* typography */
+.Header1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+}
+.Header2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.Header3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.TableHeader {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.Regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.FontButton {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.Link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+.FontWarning {
+  padding-top: 3vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+}
+
+.textInput1 {
+  width: min(25rem, 90vw);
+  border: 1px solid #6F7EFF;
+  padding: 1.25vh 0.5rem;
+  color: white;
+  border-radius: 0.5rem;
+  margin-inline: 0.25rem;
+}
+
+.btn_group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.button1 {
+  padding: 0.75rem 2.75rem;
+  border-radius: 2rem;
+  color: white;
+  background: #6F7EFF;
+  box-shadow: 0px 0px 20px 0px #B8B9FF;
+}
+.button2 {
+  padding: 0.75rem 2.75rem;
+  border-radius: 2rem;
+  color: white;
+  background: transparent;
+  border: 1px solid #6F7EFF
+}
+.button3 {
+  padding: 0.75rem 2.75rem;
+  border-radius: 2rem;
+  color: white;
+  background: #E2757E;
+  box-shadow: 0px 0px 20px 0px #B8B9FF;
+}
+.button4 {
+  padding: 0.75rem 2.75rem;
+  border-radius: 2rem;
+  color: white;
+  background: transparent;
+  border: 1px solid #ffffff
+}
+.button5 {
+  padding: 0.75rem 2.75rem;
+  border-radius: 2rem;
+  color: white;
+  background: #82e17b;
+  box-shadow: 0px 0px 20px 0px #B8B9FF;
+}
+
+/* index */
+.Index_MainContainer,
+.Login_MainContainer,
+.JoinQuiz_MainContainer,
+.PostQuizContainer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.PostQuizContainer {
+  display: none;
+}
+.Index_Block {
+  width: min(40rem, 95%);
+  height: 56vh;
+  border-radius: 0.5rem;
+  background: rgba(217, 217, 217, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-inline: 1rem;
+  margin-inline: 1rem;
+}
+.Index_Block .btn_group {
+  display: flex;
+  gap: 2.5vw;
+}
+.Index_btn1 {
+  padding-inline: 5vw;
+  padding-block: 2.3vh;
+  border-radius: 0.75rem;
+  background: #E2757E;
+  box-shadow: 0px 0px 50px 0px #E2757E;
+  border: 0;
+}
+.Index_btn2 {
+  padding-inline: 5vw;
+  padding-block: 2.3vh;
+  border-radius: 0.75rem;
+  background: #6F7EFF;
+  box-shadow: 0px 0px 50px 0px #6F7EFF;
+  border: 0;
+}
+
+/* Login */
+.Login_LoginFormContainer,
+.PostQuizFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 3vw;
+  gap: 6vh;
+  padding-block: 6vh;
+  border-radius: 0.5rem;
+  background: rgba(217, 217, 217, 0.15);
+}
+.Login_LoginFormContainer .input_group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+
+/* profBar */
+.profBar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  left: 50%;
+  transform: translate(-50%);
+  height: 6vh;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: rgba(217, 217, 217, 0.15);
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+  padding-inline: 7vw;
+  z-index: 10001;
+}
+.profBar .vr{
+  height: 60%;
+  align-self: center;
+}
+.profBar .homeBtn {
+  background: transparent;
+}
+.profBar .dropdown-menu {
+  background: rgba(217, 217, 217, 0.15);
+  text-align: end;
+}
+.profBar .dropdown-menu a {
+  color: white;
+}
+.profBar .dropdown-menu a:hover {
+  color: black;
+}
+
+/* joinQuiz */
+.JoinQuiz_Block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-inline: 2.5vw;
+  gap: 5vh;
+  padding-block: 5vh;
+  border-radius: 0.5rem;
+  background: rgba(217, 217, 217, 0.15);
+}
+
+/* openQuiz, resForTeacher */
+.OpenQuiz_MainContainer, 
+.ResForTeacher_MainContainer,
+.ShowQuizWrapper,
+.MenuTeacher_MainContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: center;
+  gap: 1.5vw;
+  margin-block: 10vh 6vh;
+  margin-inline: 1rem;
+}
+.MenuTeacher_MainContainer {
+  margin: 0;
+  justify-content: center;
+}
+.OpenQuizContainer,
+.ResForTeacherContainer,
+.ShowQuizContainer,
+.MenuTeacherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vh;
+  border-radius: 0.5rem;
+  background: rgba(217, 217, 217, 0.15);
+  padding: 5vh 1vw;
+}
+.MenuTeacherContainer .btn_group {
+  margin-inline: 0.5rem;
+}
+.MenuTeacherContainer button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 5vh;
+  gap: 2vh;
+}
+.MenuTeacherContainer p {
+  margin: 0;
+}
+.ResForTeacherContainer {
+  width: min(50rem, 94vw);
+}
+.OpenQuizContainer .searchField {
+  display: flex;
+  justify-content: center;
+}
+.OpenQuizContainer .searchField #searchBtn {
+  border: 1px solid #6F7EFF;
+  padding: 1.5vh 1rem;
+  color: white;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-left: 0;
+  background: transparent;
+}
+.OpenQuizContainer .searchField #refreshRandBtn {
+  padding: 1.5vh 1rem;
+  color: rgb(47, 113, 234);
+  background: transparent;
+}
+.OpenQuizContainer .textInput1 {
+  width: min(30rem, 72vw);
+  padding-block: 1.5vh;
+  border-radius: 0.5rem 0 0 0.5rem;
+  margin-inline: 0;
+}
+.OpenQuizContainer .tableCustom {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+
+}
+.ResForTeacherContainer .ResultsTable .row {
+  width: 100%;
+  align-self: center;
+}
+.OpenQuizContainer .tableCustom .row,
+.ResForTeacherContainer .ResultsTable .row {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  border-bottom: 0.5px solid #D9D9D9;
+  padding-block: 3vh;
+  align-self: center;
+}
+.OpenQuizContainer .tableCustom .row .col {
+  flex: 1;
+  width: 25%;
+  min-width: 15vw;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  word-break: break-word;
+}
+.OpenQuizContainer .tableCustom .row .col:nth-child(4) {
+  gap: 0.25rem;
+}
+.OpenQuizContainer .tableCustom .row .col:nth-child(4) button {
+  width: min(15rem, 100%);
+  padding: 1vh 1vw;
+}
+.OpenQuizContainer .tableCustom .row .col:last-child {
+  display: none;
+}
+.ShowQuizWrapper {
+  margin: 0;
+  justify-content: center;
+  display: none;
+}
+.ShowQuizContainer {
+  padding: 4vh 5vw;
+}
+
+.ResForTeacherContainer .ResultsTable {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.ResForTeacherContainer .ResultsTable .row .col {
+  flex-grow: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ResForTeacherContainer .ResultsTable .row .col:nth-child(1) {
+  max-width: 30%;
+  justify-content: flex-start;
+}
+.ResForTeacherContainer .ResultsTable .row:not(:first-child) .col:nth-child(2) {
+  max-width: 40%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.ResForTeacherContainer .ResultsTable .row .col:nth-child(3) {
+  max-width: 10%;
+}
+.ResForTeacherContainer .ResultsTable .row .col:nth-child(4) {
+  max-width: 20%;
+}
+.wrongAnswer, .rightAnswer {
+  height: 1.5rem;
+  box-sizing: content-box;
+  aspect-ratio: 1/1;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+}
+.wrongAnswer {
+  border: 1px solid #EF476F
+}
+.rightAnswer {
+  border: 1px solid #06D6A0
+}
+
+
+/* createQuiz */
+.createQuiz_MainContainer {
+  flex: 1;
+  padding-inline: 2vw;
+  display: grid;
+  grid-template-columns: 13fr 3fr;
+  grid-template-rows: 1fr 14fr;
+  grid-template-areas: 
+  '. .'
+  'createQuizContainer ToolsBar';
+  gap: 1rem;
+  background: #140035;
+}
+.createQuizContainer {
+  grid-area: createQuizContainer;
+  padding-bottom: 3vh;
+  flex-direction: column;
+  display: none;
+}
+ 
+.createQuizContainer #MainContainer {
+  display: flex;
+  border-radius: 0 0 1rem 1rem;
+  background: #43196B;
+  max-height: 100%;
+  min-height: 25vh;
+}
+.createQuizContainer .contHeadPart {
+  display: flex;
+  min-height: 8vh;
+  align-items: stretch;
+}
+.createQuizContainer .contHeadPart .Header3 {
+  background: #43196B;
+}
+.createQuizContainer .contHeadPart .Header3 div {
+  background: #140035;
+  border-radius: 0 0 3rem 3rem;
+}
+.createQuizContainer .contHeadPart .contAngle {
+  background: #43196B;
+  display: flex;
+  padding: 1.5vh 1vw;
+  align-items: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.createQuizContainer .timerInp {
+  background: #6868a7;
+  text-align: center;
+  color: #EBEBEB;
+  padding: 0;
+  min-width: 4vw;
+  margin-inline: 0.5vw;
+}
+.createQuizContainer .contAngle #Del_btn {
+  border-radius: 2rem;
+  padding: 1vh 1.5vw;
+  color: white;
+  background: transparent;
+  border: 1px solid #EF476F
+}
+.createQuizContainer .contHeadPart .contAngle:first-child img {
+  filter: invert(1);
+  height: 80%;
+  aspect-ratio: 1/1;
+}  
+
+/* toolsBar */
+.toolsContainerWrapper {
+  grid-area: ToolsBar;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  align-self: start;
+}
+.toolsContainer {
+  padding: 4vh 1.5vw;
+  border-radius: 0.5rem;
+  background: #3b2c56;
+  color: white;
+  display: grid;
+  gap: 1vh;
+}
+.toolsContainer i {
+ display: none;   
+}
+.toolsContainer {
+  #createdQuestionsContainer {
+    color: #6F7EFF;
+    margin-left: 0.5vw;
+    overflow-y: auto;
+    word-wrap: break-word;
+    max-height: 24vh;
+  }
+  #AddTestQGroup {
+    width: 100%;
+  }
+  #Add_btn {
+    padding-inline: 0;
+    width: 100%;
+  }
+  #Save_btn {
+    padding-inline: 0;
+  }
+  #newTaskAddDropdown {
+    background: #6F7EFF !important;
+    z-index: 10002;
+    font-family: 'Inter', sans-serif;
+  }
+  #newTaskAddDropdown button {
+    background: #6F7EFF;
+    color: white;
+  }
+  #newTaskAddDropdown button:hover {
+    background: #d4ff6f;
+    color: rgb(0, 0, 0);
+  }
+  .btn_group {
+    flex-direction: column;
+    gap: 0.25vh;
+  }
+  #createdQuestionsContainer {
+    margin-top: 1vh;
+  }
+  #createdQuestionsContainer li {
+    cursor: pointer;
+  }
+  #listShow_btn {
+    display: none;
+  }
+}
+
+@media (min-width: 866px) {
+  #QuestListCont {
+    display: block;
+    position: relative !important;
+    transform: unset !important;
+    background: transparent;
+    border: 0;
+    }
+}
+
+#QuestListCont {
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+
+/* quiztypes */
+#MainContainer,
+#DetailsContainer {
+  /* TestQuestion */
+  .TestContainer {
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+  }
+  .TestContainer {
+    .TestQuestionQuestionTextarea {
+      background: #471d415f;
+      padding-block: 3vh;
+      margin: 0.5vh 2vw;
+      color: #fdfdfd;
+      font-family: 'Inter', sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      flex-grow: 1;
+      align-self: stretch;
+      min-height: 20vh;
+      }
+    #options {
+      align-self: stretch;
+      padding: 1vh 1vw 3vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      column-gap: 1vw;
+      row-gap: 2vh;
+      flex-wrap: wrap;
+      }
+    .TestQuestionOption {
+      position: relative;
+      width: 49%;
+      background-color: rgba(41, 166, 238, 0.7);
+      border-radius: 1rem;
+      padding: 1vh 1vw;
+      display: flex;
+      flex-direction: column;
+      min-height: 24vh;
+      }
+    .TestQuestionOptionTextarea {
+      box-sizing: border-box;
+      display: flex;
+      border: 0;
+      padding-top: 1vh;
+      background-color: transparent;
+      color: #fdfdfd;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      flex-grow: 1;
+      }
+    .TestQuestionOptionLetterLabel {
+      text-align: center;
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+    }
+    .TestQuestionOption .DelBtnHanging {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      padding: 0;
+      aspect-ratio: 1/1;
+      margin: 0.75rem;
+      border: 0;
+      background: url('/resources/assets/cross.png ') center center no-repeat; 
+      background-size: contain;
+      alt: "delete";
+      }
+    .TestQuestionOption .custom_checkbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-height: 80px;
+      align-self: start;
+      }
+    .custom_checkbox input[type="checkbox"]{
+      display: none;
+      }
+    .custom_checkbox input[type="checkbox"] + label span {
+      display: inline-block;
+      width: 60px;
+      aspect-ratio: 1/1;
+      margin: 8px;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+      background: url("/resources/assets/correct.png")
+      center center no-repeat;
+      background-size: contain;
+      background-color: grey;
+      opacity: 0.5;
+      }
+    .custom_checkbox input[type="checkbox"]:checked + label span {
+      opacity: 1;
+      background: url("/resources/assets/correct.png")
+        center center no-repeat;
+      background-size: contain;
+      background-color: rgb(35, 247, 35);
+      }
+  }
+  .AddNewGroupBtn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 1%;
+    padding: 0;
+    border: 0;
+    background: url('/resources/assets/plus-green.png') center center no-repeat; 
+    background-size: contain;
+  }
+
+  /* GroupSort */
+  .GroupsContainer {
+    position: relative;
+    box-sizing: content-box;
+    margin: 1vh 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    max-height: 72vh;
+    overflow-y: auto;
+  }
+  .GroupsContainer hr {
+    height: 1px;
+    margin: 0;
+    width: 100%;
+  }
+  .GroupsContainer {
+    .colGroupContainer {
+      height: 32vh;
+      padding: 0 0.5% 0;
+      margin: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+    }
+    .GroupCard {
+      max-width: 90%;
+      border-radius: 1.5rem 0 4rem 4rem;
+      background-image: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+     }
+    .GroupName {
+      background: transparent;
+      border: 0;
+      outline: 0;
+      margin-top: 1.75rem;
+      width: 85%;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #EBEBEB;
+      text-align: center;
+    }
+    .ItemsContainer {
+      display: flex;
+      width: 100%;
+      flex-grow: 1;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-block: 1.5vh 3vh;
+      overflow-y: auto;
+    }
+    .GroupItem {
+      hyphens: auto;
+      line-break: strict;
+      word-break: break-word;
+      word-wrap: break-word;
+      box-sizing: border-box;
+      background-clip: border-box;
+      height: 40%;
+      background-color: rgba(195, 195, 195, 0.2);
+      outline: 0;
+      border: 0;
+      padding: 1vh 1vw;
+      margin: 2% 0;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow-y: auto;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5rem;
+      color: #EBEBEB;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    }
+    .GroupCardBtns {
+      max-height: 120px;
+      min-height: 100px;
+      border-radius: 0 30% 30% 0;
+      background-color: #2575fc;
+      display: flex;
+      flex-direction: column;
+      border: 0.5rem;
+    }
+    .GroupCardBtns button {
+      margin-inline: 0.5rem !important;
+    }
+    .DeleteGroupBtn {
+      position: relative;
+      width: 30px;
+      aspect-ratio: 1/1;
+      padding: 0;
+      border: 0;
+      background: url('/resources/assets/delete.png') center center no-repeat; 
+      background-size: contain;
+      alt: "del";
+    }
+    .AddNewItemBtn {
+      position: relative;
+      width: 30px;
+      aspect-ratio: 1/1;
+      padding: 0;
+      border: 0;
+      background: url('/resources/assets/plus.png') center center no-repeat; 
+      background-size: contain;
+      alt: "add";
+    }
+    .RemoveItemBtn {
+      position: relative;
+      width: 30px;
+      aspect-ratio: 1/1;
+      padding: 0;
+      border: 0;
+      background: url('/resources/assets/minus.png') center center no-repeat; 
+      background-size: contain;
+      alt: "del";
+    }
+  }
+  
+  /* PutInOrder */
+  .sentenceInput,
+  #sentenceOutput {
+    text-align: center;
+    font-size: 1.75rem;
+    font-family: 'Roboto', sans-serif;
+    margin-block: 3vh;
+    padding: 2vh 1vw;
+    max-height: 35vh;
+    overflow-y: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+  .sentenceInput {
+    width: 100%;
+    min-height: 20vh;
+    border: 1px solid #6F7EFF;
+    outline-color: #ca1f1f;
+    background: transparent;
+  }
+  #sentenceOutput span {
+    color: rgb(255, 255, 255, 0.2);
+    text-decoration: underline white;;
+    text-underline-offset: 0.75rem;
+  }
+
+  /* FillMissingWords */
+  .FMW_inputTextBlock {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    grid-template-areas: 
+    'Input Button'
+    'Label Label'
+    'Sample Sample'
+    ;
+    padding: 3vh 1vw;
+    gap: 2vh 1vw;
+  }
+  #FMW_InputText, 
+  #FMW_OutputText {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 1.75rem;
+    overflow-y: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  #FMW_InputText {
+    grid-area: Input;
+    width: 100%;
+    padding: 2vh 1vw;
+    border: 1px solid #00C270;
+    outline-color: #ca1f1f;
+    background: transparent;
+    min-height: 20vh;
+    display: inline;
+  }
+  #FMW_InputText span {
+    background: #bcc200;
+  }
+  #FMW_OutputText {
+    margin: 1vh 1vw;
+    padding-right: 8vw;
+    max-height: 40vh;
+  }
+  #FMW_OutputText span {
+    color: rgb(255, 255, 255, 0.2);
+    text-decoration: underline white;;
+    text-underline-offset: 0.75rem;
+  }
+  #FMW_SaveInputTextBtn {
+    grid-area: Button;
+    width: 7vw;
+    color: white;
+    background: #00C270;
+    border-radius: 0.75rem;
+  }
+  #FMW_EditInputTextBtn {
+    display: none;
+    grid-area: Button;
+    width: 7vw;
+    color: white;
+    background: #0092c2;
+    border-radius: 0.75rem;
+  }
+
+
+  /* TermToDef */
+  #TermToDefContainer {
+    position: relative;
+    overflow-y: auto; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 0;
+    max-height: 75vh;
+  }
+  #TermToDefContainer {
+    .termPart,
+    .defPart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-block: 5vh;
+      gap: 3vh;
+      flex-wrap: wrap;
+    }
+    .defPart {
+      background-color: rgba(47, 89, 255, 0.1);
+    }
+    .blockcol {
+      height: 10vh;
+      width: 65%;
+      padding: 0.75vh 1vw;
+      background-clip: padding-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: 2px solid transparent;
+      background:  #9c9b9c4d;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+      font-size: 1.25rem;
+      overflow-y: auto;
+      word-break: break-word;
+      word-wrap: break-word;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      outline: 0;
+      text-align: center;
+    }
+    .btn_group {
+      width: fit-content;
+      position: sticky;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 0;
+    }
+    .btn_group button {
+      width: 3rem;
+      background: #afafaf47;
+      color: white;
+      border-width: 1px;
+      border-color: rgb(176, 176, 176);
+      border-style: solid;
+      border-bottom: 0;
+    }
+    .btn_group button:first-child {
+      border-radius: 0.5rem 0 0 0;
+      border-right: 0;
+    }
+    .btn_group button:last-child {
+      border-radius: 0 0.5rem 0 0;
+      border-left: 0;
+    }
+  }
+}
+
+
+
+
+.PostQuizFormContainer .input_group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem
+}
+.PostQuizFormContainer .input_group textarea {
+  overflow-y: hidden;
+  background: transparent;
+  text-align: start;
+  border: 1px solid #6F7EFF;
+  padding: 1.25vh 0.5rem;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+
+
+/* quizInterface */
+.quizInterfaceMainContainer {
+  flex: 1;
+  display: flex;
+  margin: 2vh 3vw 4vh;
+  margin-bottom: 0;
+}
+.quizInterfaceContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  background: #43196B;
+}
+
+.progress-bar-vertical {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0.5rem;
+  border-radius: 0;
+  background-color: transparent;
+  float: left;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px;
+}
+.run-animation {
+  animation: progressbar-countdown;
+  /* Placeholder, this will be updated using javascript */
+  /* We stop in the end */
+  animation-iteration-count: 1;
+  /* Stay on pause when the animation is finished finished */
+  animation-fill-mode: forwards;
+  /* We start paused, we start the animation using javascript */
+  animation-play-state: paused;
+  /* We want a linear animation, ease-out is standard */
+  animation-timing-function: linear;
+}
+
+@keyframes progressbar-countdown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.quizInterfaceMainContainer #MainContainer {
+  max-height: 88vh;
+}
+.quizInterfaceMainContainer #MainContainer,
+#DetailsContainer {
+  /* testquestion interface */
+  .TestContainer {
+    .TestQuestionOption {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 20% 80%;
+      height: clamp(200px, 20vh, 300px);
+      gap: 1vh;
+      font-size: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .TestQuestionQuestionTextarea {
+      font-weight: 600;
+    }
+    .TestQuestionQuestionTextarea,
+    .TestQuestionOptionTextarea {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      word-break: break-word;
+    }
+    .TestQuestionOptionLetterLabel {
+      text-align: center;
+      margin: 0;
+      font-weight: 700;
+      color: white;
+    }
+  }
+  
+  /* groupsort interface */
+  #GroupSort_thisContainer {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 58% 42%;
+    max-height: none;
+  }
+  .dCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1vh;
+    column-gap: 1vw;
+    padding: 1vh 1vw;
+  }
+  #GroupSort_GroupsContainer {
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  #GroupSort_ItemsContainer {
+    flex-wrap: wrap;
+    overflow-y: hidden;
+  }
+  #GroupSort_thisContainer
+  {
+    .GroupCard {
+      border-radius: 1.5rem;
+      background-image: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+      height: 80%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 30% 1% 69%;
+      align-items: center;
+      justify-content: center;
+    }
+  .GroupName {
+      width: 100%;
+      flex: 1;
+      font-size: 1.75rem;
+      margin: 0;
+      margin-top: 5%;
+    }
+  .ItemsContainer {
+      min-height: 20vh;
+      height: 100%;
+      padding-inline: 0.5vw;
+    }
+  .GroupItem {
+      height: auto;
+      width: clamp(250px, fit-content, 90%);
+      word-break: break-word;
+      word-wrap: break-word;
+    }  
+  } 
+
+  /* putinorder interface, fmw */
+  #PutInOrder_thisContainer,
+  #FMW_thisContainer {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%
+  }
+  #PutInOrder_ItemsContainer,
+  #FMW_ItemsContainer {
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .Interf_sentenceInput {
+    display: inline;
+    text-align: center;
+    flex-grow: 1;
+    max-width: 90vw;
+    font-size: 2.5rem;
+    color: aliceblue;
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    padding: 1vh 1vw;
+    min-height: 10vh;
+    max-height: 50vh;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-y: auto;
+  }
+  .textPiece {
+    font-size: 2.5rem;
+    color: aliceblue;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: inherit;
+  }
+  .PIO_wordCont { 
+    text-decoration: underline;
+    padding: 2%;
+  }
+
+  #TermToDefContainer {
+    max-height: none;;
+  }
+
+}
+
+
+
+@media (max-width: 866px) {
+  html {
+    font-size: 14px;
+  }
+
+  .createQuiz_MainContainer {
+    grid-template-columns: 88% 10%;
+    gap: 2%;
+  }
+  /* toolsBar */
+  .toolsContainerWrapper {
+    min-width: 60px;
+  }
+  .toolsContainer {
+    width: 100%;
+    padding: 1vh 1vw;
+  }
+  .toolsContainer i {
+    display: inline;   
+   }
+  .toolsContainer span {
+    display: none;
+  }
+  .toolsContainer hr {
+    margin-block: 0.5vh;
+  }
+  .toolsContainer {
+    .button1,
+    .button2, 
+    .button4,
+    .button5 {
+      padding: 1vh 1vw;
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+    #createdQuestionsContainer {
+      max-height: none;
+    }
+    #listShow_btn {
+      display: block;
+    }
+    #QuestListCont {
+      background: #3b2c56 !important;
+      position: absolute;
+      left: -1vw !important;
+      transform: translate3d( -100%, 0, 0) !important;
+      padding: 2vh 1.5vw 1vh;
+      width: fit-content;
+    }
+  }
+  @media (min-width: 576px) {
+    #newTaskAddDropdown {
+      background: #3b2c56 !important;
+      position: absolute;
+      left: -1vw !important;
+      transform: translate3d( -100%, 0, 0) !important;
+      width: fit-content;
+    }
+  }
+
+  .createQuizContainer #MainContainer {
+    .TestContainer {
+      .custom_checkbox input[type="checkbox"] + label span {
+        width: 40px;
+      }
+      .TestQuestionOption .DelBtnHanging {
+        width: 30px;
+      }
+    }
+  }
+  
+  .quizInterfaceMainContainer #MainContainer {
+    #GroupSort_thisContainer {
+      .GroupCard {
+        width: 45%;
+        height: 47%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+
+  .createQuiz_MainContainer {
+    grid-template-columns: 100%;
+    grid-template-rows: 7% 83% 5%;
+    grid-template-areas: 
+    '.'
+    'createQuizContainer'
+    'ToolsBar';
+    gap: 1%;
+  }
+  .toolsContainerWrapper {
+    min-width: 60px;
+    flex-direction: row;
+  }
+  .toolsContainer {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    padding: 1vh 1vw;
+  }
+  .toolsContainer hr {
+    margin-block: 0.5vh;
+  }
+  .toolsContainer .btn_group {
+    flex-direction: row;
+  }
+  .toolsContainer.toolsContainer button,
+  .toolsContainer.toolsContainer #Add_btn {
+    width: 3rem;
+    aspect-ratio: 1/1;
+  }
+  #QuestListCont#QuestListCont {
+    bottom: 100% !important;
+    left: 0 !important;
+    transform: translate3d( 0, -1vh, 0) !important;
+  }
+  #newTaskAddDropdown {
+    width: fit-content;
+    inset: auto !important;
+    bottom: 100% !important;
+    left: 0 !important;
+    transform: translate3d( 0, -1vh, 0) !important;
+  }
+  #newTaskAddDropdown button {
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 0;
+  }
+
+  
+  .createQuizContainer #MainContainer {
+    .TestContainer {
+      .custom_checkbox input[type="checkbox"] + label span {
+        width: 40px;
+      }
+      .TestQuestionOption .DelBtnHanging {
+        width: 30px;
+      }
+    }
+    .GroupsContainer {
+      .AddNewGroupBtn {
+        position: sticky;
+        left: 100%;
+        width: 45px;
+      }
+      .btn {
+        width: 25px;
+      }
+    }
+  }
+
+  .blockcol {
+    width: 80%;
+  }
+  .quizInterfaceMainContainer #MainContainer #TermToDefContainer .termPart, 
+  .quizInterfaceMainContainer #MainContainer #TermToDefContainer .defPart {
+    height: 50%;
+    overflow-y: auto;
+  }
+  .quizInterfaceMainContainer #MainContainer #TermToDefContainer .blockcol {
+    width: 45%;
+    padding: 0.75vh 1vw;
+    font-size: 1.25rem;
+  }
+
+  .QuizDetailsContainer.QuizDetailsContainer {
+    width: 96%;
+  }
+  
+}
+
+
+@media (max-width: 330px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+
+
+.ResultsHeader {
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 4rem;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.resultsButton {
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex: 1;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.UppestContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Details {
+  text-decoration: underline;
+  color: #2575fc;
+  cursor: pointer;
+}
+.QuizDetailsContainer {
+  position: relative;
+  min-height: 50vh;
+  max-height: 92vh;
+  margin-top: 7vh;
+  margin-bottom: 1vh;
+  width: 80%;
+  padding: 3vh 2vw;
+  background: #43196B;
+  border-radius: 1rem;
+  z-index: 10000;
+  display: none
+}
+.UppestContainer {
+  #prevBtn {
+    left: 0;
+    background: url("/resources/assets/arrow-left.png")
+    center center no-repeat;
+    background-size: contain;
+  }
+  #nextBtn {
+    right: 0;
+    background: url("/resources/assets/arrow-right.png")
+    center center no-repeat;
+  }
+  #nextBtn, 
+  #prevBtn {
+    background-size: contain;
+    position: absolute;
+    min-height: 16vh;
+    aspect-ratio: 1/2;
+    margin-inline: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    z-index: 10000;
+  }
+  #nextBtn:hover, 
+  #prevBtn:hover {
+    opacity: 1;
+  }
+  #nextBtn:active, 
+  #prevBtn:active {
+    filter: invert(0.3);
+  }
+  #backBtn,
+  #timeRes,
+  #showCorBtn,
+  #hideCorBtn {
+    position: absolute;
+    aspect-ratio: 1/1;
+    margin: 1vh 1vw;
+    z-index: 10000;
+  }
+  #backBtn,
+  #showCorBtn,
+  #hideCorBtn {
+    opacity: 0.8;
+  }
+  #backBtn:hover,
+  #showCorBtn:hover,
+  #hideCorBtn:hover {
+    opacity: 1;
+  }
+  #backBtn {
+    background: url("/resources/assets/exit.png")
+    center center no-repeat;
+    background-size: contain;
+    left: 0;
+    top: 0;
+    min-height: 10vh;
+  }
+  #timeRes {
+    background: url("/resources/assets/zhizha.png")
+    center center no-repeat;
+    background-size: contain;
+    right: 0;
+    bottom: 0;
+    min-height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  #showCorBtn {
+    background: url("/resources/assets/show.png")
+    center center no-repeat;
+    background-size: contain;
+    right: 0;
+    top: 0;
+    min-height: 8vh;
+  }
+  #hideCorBtn {
+    background: url("/resources/assets/hide.png")
+    center center no-repeat;
+    background-size: contain;
+    right: 0;
+    top: 0;
+    min-height: 8vh;
+    display: none;
+  }
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 9999;
+}
+#DetailsContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.QuizDetailsContainer #DetailsContainer {
+  .TestContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'TQuestion'
+    'TOptions';
+    max-height: 100%;
+  }
+  #options {
+    grid-area: TOptions;
+  }
+  .TestQuestionOption {
+    max-height: 50%;
+  }
+  .TestQuestionOptionTextarea {
+    font-size: 1.5rem;
+    overflow-y: auto;
+    padding: 0;
+  }
+  .TestQuestionQuestionTextarea {
+    grid-area: TQuestion;
+    font-size: 1.75rem;
+    overflow-y: auto;
+  }
+  
+  #GroupSort_thisContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding-inline: 2vw;
+  }
+  #GroupSort_thisContainer {
+    .GroupCard {
+      width: 45%;
+      flex-grow: 0;
+    }
+    .ItemsContainer {
+      display: flex;
+      justify-content: center;
+      padding-inline: 1vw;
+    }
+  }
+  .PutInOrderContainer,
+  .FMW_inputTextBlock {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #sentenceInput,
+  #FMW_InputText {
+    font-size: 2.25rem;
+    max-height: none;
+  }
+
+  #TermToDefContainer {
+    height: 100%;
+  }
+  #TermToDefContainer .blockcol {
+    max-width: 45%;
+    height: 8vh;
+  }
+}
+
+
+.MenuTeacherContainer .Index_btn1 div {
+  background: url('/resources/assets/edit.png') center center no-repeat;
+  background-size: contain; 
+  width: min(10vw, 15vh); 
+  aspect-ratio: 1/1;
+}
+.MenuTeacherContainer .Index_btn2 div {
+  background: url('/resources/assets/menu.png') center center no-repeat;
+  background-size: contain; 
+  width: min(10vw, 15vh); 
+  aspect-ratio: 1/1;
+}
+
+
+#alertCheckBox {
+  display: none;
+}
+#AlertWindow {
+  position: fixed;
+  top: 1vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1vh 2vw;
+  background: #ce4848;
+  border-radius: 0.75rem;
+  font-size: 2rem;
+  z-index: 10002;
+  color: white;
+  min-width: 30vw;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: all;
+}
+#alertCheckBox:checked + #AlertWindow {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#AlertWindow p {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+#lessonContent td {
+    border: 1px solid;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; } /* user agent */
+h3 { font-size: 1.17em; } /* user agent */
+h4 { font-size: 1em; } /* user agent */
+h5 { font-size: .83em; } /* user agent */
+h6 { font-size: .67em; } /* user agent */
+
+
