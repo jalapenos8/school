@@ -127,7 +127,7 @@
                 </div>
             </form>
         </div>
-        <div class="w-full hidden px-16 p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="whiteboard" role="tabpanel" aria-labelledby="whiteboard-tab">
+        {{-- <div class="w-full hidden px-16 p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="whiteboard" role="tabpanel" aria-labelledby="whiteboard-tab">
             <form method="POST" spellcheck="false" action="{{ route('steps.store', [$subject, $unit, $lesson]) }}">
                 @csrf
                 
@@ -146,7 +146,7 @@
                     </x-primary-button>
                 </div>
             </form>
-        </div>
+        </div> --}}
     </div>
     <x-tinymce-config/>
     <script>
