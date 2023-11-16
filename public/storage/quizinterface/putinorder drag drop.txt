@@ -1,0 +1,17 @@
+  function handleDropEvent(event, ui) {
+    var $self = $(this);
+    var $item = ui.draggable;
+    var $prevPar = $item.parent();
+    $self.empty();
+    $item.appendTo($self).attr("style", "");
+    $item.draggable("destroy");
+    $prevPar.remove();
+  }
+
+  $(".draggable").draggable({
+    revert: "invalid"             //return to original position if not dropped into droppable
+  });
+
+  $(".droppable").droppable({
+    drop: handleDropEvent
+  });

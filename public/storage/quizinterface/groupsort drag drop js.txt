@@ -1,0 +1,38 @@
+
+
+
+$(document).ready(function () {
+    
+        function handleDropEvent(event, ui) {
+          var $self = $(this);
+          var $item = ui.draggable;
+          //var $prevPar = $item.parent();
+          $item.position({
+            my: 'left top',
+            at: 'left top',
+            of: $self
+          });
+          //$self.droppable("destroy");
+          $item.appendTo($self).attr("style", "");
+          $item.draggable("destroy");
+          //$prevPar.remove();
+          $item.draggable({
+            start: function() {
+              $self.droppable({
+                drop: handleDropEvent
+              });
+            }
+          })
+        }
+      
+        $(".draggable").draggable({
+          revert: "invalid"             //return to original position if not dropped into droppable
+        });
+      
+        $(".droppable").droppable({
+          drop: handleDropEvent
+        });
+    
+    
+
+});

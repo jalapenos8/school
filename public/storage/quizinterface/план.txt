@@ -1,0 +1,39 @@
+Make quiz interface:
+1. Get quiz data through ajax
+
+2. Make a clean interface for each quiz type
+	.TestQuestion	— done
+	.GroupSort	— drag drop
+	.PairMatching	— click the correct for current one
+	.PutInOrder	— drag drop ?
+	.FillMissingWords	— drag drop
+	.TermToDef	— click pair consecutively
+
+3. Make loading task data on interface for each type
+
+4. Make getting answer and sending it to the table (add task type column and AnswerScore column)
+Question is answered when:
+	.TestQuestion	— an option is clicked
+	.GroupSort	— all items are dragged into groups
+	.PairMatching	— all questions are answered. the chosen answer gets banished if correct and stays if incorrect
+	.PutInOrder	— all sentence elements are dragged into container (I guess we will use spans as draggables)
+	.FillMissingWords	— words are dragged to all empty spaces
+	.TermToDef	— show how many pairs are there, then when so many pairs are linked
+
+5. Show right answer
+	.TestQuestion	— wrong student answer is red, correct is green
+	.GroupSort	— AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	.PairMatching	— like... show each after each answer?
+	.PutInOrder	— just show right answer
+	.FillMissingWords	— wrong ones are red, right ones are green
+	.TermToDef	— just show right answer
+Click Next button to proceed to the next question
+
+6. Make proceeding to the next question
+
+7. Just show result score		//для этого надо криткуиз менять, на каждый вопрос баллы вводить заставлять
+
+
+
+
+
