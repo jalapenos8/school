@@ -7,7 +7,8 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/js/createquiz.js',
+                'resources/js/**.js',
+                'resources/css/**.css',
             ],
             refresh: true,
         }),
