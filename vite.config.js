@@ -7,30 +7,18 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'resources/js/createquiz.js',
+                'resources/css/style.css',
+                'resources/js/addUser.js',
+                'resources/js/alert.js',
+                'resources/js/joinQuiz.js',
+                'resources/js/login.js',
+                'resources/js/openQuiz.js',
+                'resources/js/quizInterface.js',
+                'resources/js/results.js',
+                'resources/js/resultsForTeacher.js',
             ],
             refresh: true,
         }),
     ],
-    build: {
-      rollupOptions: {
-        output: {
-          chunkFileNames: 'resources/js/[name]-[hash].js',
-          entryFileNames: 'resources/js/[name]-[hash].js',
-          
-          assetFileNames: ({name}) => {         
-            if (/\.js$/.test(name ?? '')) {
-                return 'resources/js/[name]-[hash][extname]';   
-            }
-
-            if (/\.css$/.test(name ?? '')) {
-                return 'resources/css/[name]-[hash][extname]';   
-            }
-   
-            // default value
-            // ref: https://rollupjs.org/guide/en/#outputassetfilenames
-            return 'resources/[name]-[hash][extname]';
-          },
-        },
-      }
-    },
 });
