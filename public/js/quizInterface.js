@@ -1,8 +1,8 @@
 $(document).ready(function () {
     class Task{
         constructor(Name, TaskObj, Timer){
-            this.name = Name;
-            this.taskObj = TaskObj;  
+            this.Name = Name;
+            this.TaskObj = TaskObj;  
             this.Timer = Timer;
         }
     }
@@ -112,7 +112,7 @@ $(document).ready(function () {
             {
                 theTask = response.data;
                 let ShowSolutionStr = `
-                ${theTask.name}_ShowSolution(theTask.taskObj);
+                ${theTask.Name}_ShowSolution(theTask.TaskObj);
                 `;
                 eval(ShowSolutionStr);
                 

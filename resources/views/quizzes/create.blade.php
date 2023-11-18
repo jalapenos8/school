@@ -112,5 +112,5 @@ session(['count' => 0]);
           </div>
         </div>
       </div>
-      @vite(['resources/js/createquiz.js'])
+      <script src="/js/createquiz.js"></script>
 </x-quiz-layout>

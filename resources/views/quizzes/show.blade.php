@@ -31,5 +31,5 @@ session(['count' => $count]);
         </div>
     </div>
 
-    @vite(['resources/js/quizInterface.js'])
+    <script src="/js/quizInterface.js"></script>
 </x-quiz-layout>
