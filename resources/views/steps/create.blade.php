@@ -21,9 +21,6 @@
             <li class="mr-1" role="presentation">
                 <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="interactive-tab" data-tabs-target="#interactive" type="button" role="tab" aria-controls="interactive" aria-selected="false">Interactive</button>
             </li>
-            <li role="presentation">
-                <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="whiteboard-tab" data-tabs-target="#whiteboard" type="button" role="tab" aria-controls="whiteboard" aria-selected="false">Online whiteboard</button>
-            </li>
         </ul>
     </div>
     <div id="myTabContent" class="flex items-center max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
