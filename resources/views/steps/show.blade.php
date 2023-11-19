@@ -11,7 +11,7 @@
 
     {{ Breadcrumbs::render('steps.show', $subject, $unit, $lesson, $step) }}
 
-    <div class="flex max-w-7xl mx-auto mt-2 px-4 sm:px-6 lg:px-8 text-lg text-gray-800 dark:text-gray-200 leading-tight">
+    <div class="flex max-w-7xl pb-4 max-h-4/5 mx-auto mt-2 px-4 sm:px-6 lg:px-8 text-lg text-gray-800 dark:text-gray-200 leading-tight">
         @include('components.side-bar')
         
         <x-lesson-content class="text-xl leading-9">

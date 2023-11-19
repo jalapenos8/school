@@ -1,4 +1,4 @@
-<div class="flex overflow-y-auto flex-col px-4 rounded-lg bg-white dark:bg-gray-800 w-1/4" style="height: 80vh;"> {{-- lessons and activities --}}
+<div class="flex overflow-y-auto flex-col px-4 rounded-lg bg-white dark:bg-gray-800 w-1/4"> {{-- lessons and activities --}}
     <p class="py-2 text-2xl text-center">Lessons</p>
     <ol class="">
         @foreach ($lessons as $lesson)
