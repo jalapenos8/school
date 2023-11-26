@@ -1,4 +1,4 @@
-<div class="flex overflow-y-auto flex-col px-4 rounded-lg bg-white dark:bg-gray-800 w-1/4"> {{-- lessons and activities --}}
+<div class="flex overflow-y-auto flex-col px-3 rounded-lg bg-white dark:bg-gray-800 w-1/4"> {{-- lessons and activities --}}
     <p class="py-2 text-2xl text-center">Lessons</p>
     <ol class="">
         @foreach ($lessons as $lesson)
@@ -7,7 +7,7 @@
                     <i class="fa fa-book" aria-hidden="true"></i>
                     <a class="text-xl font-medium" href="{{ route('lessons.show', [$subject, $unit, $lesson]) }}">
                      {{ $lesson->name }}</a>
-                <ol class="list-none ml-2 my-1">
+                <ol class="list-none ml-3 my-1">
                     @foreach ($steps as $step)
                         @if ($step->lesson_id == $lesson->id)
                             <li class="py-1 mb-1 dark:bg-gray-900 break-all">

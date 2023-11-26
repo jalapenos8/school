@@ -39,16 +39,14 @@
                                 $parts = parse_url($step->content);
                                 parse_str($parts['query'], $query);
                             ?>
-                            <iframe class="mx-auto" width="90%" height="90%" modestbranding rel=0 showinfo=0 controls=0 src="https://www.youtube.com/embed/{{ $query['v'] }}?rel=0&showinfo=0"  allowfullscreen></iframe>
+                            <iframe class="mx-auto mt-4" width="100%" height="370px" modestbranding rel=0 showinfo=0 controls=0 src="https://www.youtube.com/embed/{{ $query['v'] }}?rel=0&showinfo=0"  allowfullscreen></iframe>
                         @elseif($step->type == 'interactive')
                             <?php
                                 $playId = explode("play", $step->content);
                             ?>
-                            <iframe width="100%" height="100%" class="mx-auto" src="https://wordwall.net/embed/play{{ $playId[1] }}" frameborder="0" allowfullscreen></iframe>
+                            <iframe width="100%" height="380px" class="mx-auto mt-4" src="https://wordwall.net/embed/play{{ $playId[1] }}" frameborder="0" allowfullscreen></iframe>
                     
-                            </form>
-                        @elseif($step->type == 'whiteboard')
-                        
+                            </form>                        
                         @endif
                     </div>
                 </div>

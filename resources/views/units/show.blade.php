@@ -15,24 +15,26 @@
         @include('components.side-bar')
         
         <x-lesson-content class="text-xl leading-9">
-            <div>
-                Welcome to unit "{{ $unit->name }}"!
-                Choose a lesson from left sidebar.
+            <div class="flex flex-col min-h-full py-6">
+                <div>
+                    Welcome to unit "{{ $unit->name }}"!
+                    Choose a lesson from left sidebar.
+                </div>
+                @subject($subject)
+                <div class="mt-auto">
+                    <form class="mt-2" method="POST" action="{{ route('units.change', [$subject, $unit]) }}">
+                        @csrf
+                        <x-primary-button>
+                            @if ($unit->status == 'awaiting')
+                                Опубликовать
+                            @else
+                                Скрыть
+                            @endif
+                        </x-primary-button>
+                    </form>
+                </div>
+                @endsubject
             </div>
-            @subject($subject)
-            <div class="mt-auto">
-                <form class="mt-2" method="POST" action="{{ route('units.change', [$subject, $unit]) }}">
-                    @csrf
-                    <x-primary-button>
-                        @if ($unit->status == 'awaiting')
-                            Опубликовать
-                        @else
-                            Скрыть
-                        @endif
-                    </x-primary-button>
-                </form>
-            </div>
-            @endsubject
         </x-lesson-content>
     </div>
 
